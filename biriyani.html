@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biryani Menu</title>
+  <link rel="stylesheet" href="briyani.css" />
+</head>
+<body>
+
+  <!-- Biryani Items Grid -->
+  <div class="menu">
+
+    <div class="items">
+     
+      <h1>Chicken Dum Biryani </h1>
+      <button onclick="addToCart('Chicken Dum Biryani', 120)">quater</button>
+      <button onclick="addToCart('Chicken Dum Biryani', 160)">half</button>
+      <button onclick="addToCart('Chicken Dum Biryani', 240)">full</button>
+    </div>
+    <div class="items">
+    
+      <h1>Egg Biryani</h1>
+      <button onclick="addToCart('Egg Biryani', 120)">Add to Cart</button>
+    </div>
+
+    <div class="items">
+      <h1>Paneer Biryani</h1>
+      <button onclick="addToCart('Paneer Biryani', 150)">Add to Cart</button>
+    </div>
+
+    <div class="items">
+      <h1>Mutton Dum Biryani</h1>
+      <button onclick="addToCart('Mutton Dum Biryani', 220)">Add to Cart</button>
+    </div>
+
+    <div class="items">
+      <h1>Fish Biryani</h1>
+      <!-- <button onclick="addToCart('Fish Biryani', 160)">Add to Cart</button> -->
+    </div>
+
+    <div class="items">
+      <h1>Prawns Biryani</h1>
+      <button onclick="addToCart('Prawns Biryani', 200)">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <!-- Go to Cart Button -->
+  <div class="cart-button-container">
+    <a href="cart.html">
+      <button class="go-to-cart-btn">Go to Cart</button>
+    </a>
+  </div>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart!`);
+    }
+  </script>
+  
+</body>
+</html>
