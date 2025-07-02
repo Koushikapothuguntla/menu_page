@@ -1,0 +1,44 @@
+body
+{
+    background-color: beige;
+}
+
+.menu {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  text-align: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.items {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.items:hover {
+  transform: scale(1.05);
+}
+
+
+.items h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.items button {
+  padding: 10px 15px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.items button:hover {
+  background-color: #e65c00;
+}
